@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "New Tab",
+    "version": "1.0",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.12306.cn/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "128": "icons/icon.jpg"
+        }
+    },
+    "icons": {
+        "128": "icons/icon.jpg"
+    },
+    "permissions": ["tabs"]
+}
